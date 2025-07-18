@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "text": "Você é um(a) desenvolvedor(a) contratado(a) para trabalhar em uma startup que depende totalmente do seu código para sobreviver. O gerente quer que você use uma lib nova da moda que ninguém conhece. Ele promete visibilidade."
+  },
+  {
+    "id": 2,
+    "text": "Após sobreviver ao seu primeiro mês na startup, você conquistou certa confiança. Mas agora começou um novo ciclo: a primeira sprint com deadline real para entregar um MVP. O PO quer que a funcionalidade do carrinho fique pronta até sexta, mas isso exige trabalhar no sábado."
+  },
+  {
+    "id": 3,
+    "text": "Você entregou o MVP. Foi um caos, mas funcionou. Agora a startup cresceu rápido demais. Estão surgindo bugs em produção, códigos duplicados, e features que se quebram sozinhas. Um dev sênior quer reescrever todo o back-end em Rust. Só ele sabe usar"
+  }
+]
