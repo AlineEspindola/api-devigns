@@ -23,27 +23,14 @@ function initDatabase() {
       }
       console.log("Usando banco de dados: devigns");
 
-      const createTables = createSQLTables();
-
-      createTables.forEach((table) => {
-        db.query(table.sql, (err) => {
-          if (err) {
-            console.error(
-              `Erro ao criar tabela "${table.name}" :`,
-              err.message
-            );
-          } else {
-            console.log(`Tabela "${table.name}" verificada/criada`);
-          }
-        });
-      });
+      createTables();
 
       insertTables();
     });
   });
 }
 
-function createSQLTables() {
+function createTables() {
   const createTables = [
     {
       name: "turn",
@@ -104,7 +91,16 @@ function createSQLTables() {
       `,
     },
   ];
-  return createTables;
+
+  createTables.forEach((table) => {
+    db.query(table.sql, (err) => {
+      if (err) {
+        console.error(`Erro ao criar tabela "${table.name}" :`, err.message);
+      } else {
+        console.log(`Tabela "${table.name}" verificada/criada`);
+      }
+    });
+  });
 }
 
 function insertTables() {
@@ -127,7 +123,7 @@ function insertTables() {
           if (insertErr) {
             console.error(`Erro ao inserir capítulo ${chapter_ID}:`, insertErr);
           } else {
-            console.log(`Capítulo ${chapter_ID} inserido com sucesso.`);
+            console.log(`Capítulo ${chapter_ID} inserido com sucesso`);
           }
         });
       }
@@ -166,7 +162,7 @@ function insertTables() {
           insertSql,
           [
             options_ID,
-            chapter_ID, 
+            chapter_ID,
             right_text,
             left_text,
             right_sanity,
@@ -185,7 +181,7 @@ function insertTables() {
                 insertErr
               );
             } else {
-              console.log(`Opções ${options_ID} inserido com sucesso.`);
+              console.log(`Opções ${options_ID} inserido com sucesso`);
             }
           }
         );
