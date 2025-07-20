@@ -1,0 +1,72 @@
+[
+  {
+    "options_ID": 1,
+    "chapter_ID": 1,
+    "right_text": "Lançar com mais funções",
+    "left_text": "Focar só no básico",
+    "right_sanity": -20,
+    "right_knowledge": 30,
+    "right_money": 0,
+    "left_sanity": 10,
+    "left_knowledge": 0,
+    "left_money": 0,
+    "next_chapter_right": 2,
+    "next_chapter_left": 3
+  },
+  {
+    "options_ID": 2,
+    "chapter_ID": 3,
+    "right_text": "O produto alcança sucesso moderado e você decide seguir outros projetos",
+    "left_text": "Você vende a startup para uma empresa maior e parte para novos desafios",
+    "right_sanity": 0,
+    "right_knowledge": 10,
+    "right_money": 0,
+    "left_sanity": 0,
+    "left_knowledge": 0,
+    "left_money": 50,
+    "next_chapter_right": null,
+    "next_chapter_left": null
+  },
+  {
+    "options_ID": 3,
+    "chapter_ID": 2,
+    "right_text": "Investir em equipe para corrigir bugs rapidamente",
+    "left_text": "Aceitar a situação e focar em outros projetos",
+    "right_sanity": -30,
+    "right_knowledge": 0,
+    "right_money": -30,
+    "left_sanity": 15,
+    "left_knowledge": 0,
+    "left_money": 0,
+    "next_chapter_right": 4,
+    "next_chapter_left": null
+  },
+  {
+    "options_ID": 4,
+    "chapter_ID": 4,
+    "right_text": "Expandir o produto com novas funcionalidades",
+    "left_text": "Manter o foco na qualidade e estabilidade",
+    "right_sanity": -10,
+    "right_knowledge": 20,
+    "right_money": 0,
+    "left_sanity": 20,
+    "left_knowledge": 0,
+    "left_money": 0,
+    "next_chapter_right": null,
+    "next_chapter_left": null
+  },
+  {
+    "options_ID": 5,
+    "chapter_ID": 5,
+    "right_text": "Aceitar o projeto e se dedicar ao máximo",
+    "left_text": "Recusar para focar em seus próprios projetos",
+    "right_sanity": -30,
+    "right_knowledge": 50,
+    "right_money": 0,
+    "left_sanity": 20,
+    "left_knowledge": 0,
+    "left_money": 0,
+    "next_chapter_right": null,
+    "next_chapter_left": null
+  }
+]

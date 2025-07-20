@@ -1,14 +1,27 @@
 [
   {
-    "id": 1,
-    "text": "Você é um(a) desenvolvedor(a) contratado(a) para trabalhar em uma startup que depende totalmente do seu código para sobreviver. O gerente quer que você use uma lib nova da moda que ninguém conhece. Ele promete visibilidade."
+    "chapter_ID": 1,
+    "text": "Você resolve criar um MVP do zero para testar uma ideia de aplicativo de produtividade que une tarefas, foco e gamificação. Em uma semana, você consegue montar algo funcional com React Native e Firebase. Um investidor anjo se interessa, mas quer que você apresente resultados concretos em 30 dias",
+    "is_sequel": false
   },
   {
-    "id": 2,
-    "text": "Após sobreviver ao seu primeiro mês na startup, você conquistou certa confiança. Mas agora começou um novo ciclo: a primeira sprint com deadline real para entregar um MVP. O PO quer que a funcionalidade do carrinho fique pronta até sexta, mas isso exige trabalhar no sábado."
+    "chapter_ID": 2,
+    "text": "Você decide lançar o MVP com mais funções, mesmo correndo o risco de atrasar. Isso atrai alguns usuários, mas o app fica instável e os feedbacks negativos começam a aparecer",
+    "is_sequel": true
   },
   {
-    "id": 3,
-    "text": "Você entregou o MVP. Foi um caos, mas funcionou. Agora a startup cresceu rápido demais. Estão surgindo bugs em produção, códigos duplicados, e features que se quebram sozinhas. Um dev sênior quer reescrever todo o back-end em Rust. Só ele sabe usar"
+    "chapter_ID": 3,
+    "text": "Você opta por focar no básico, entregando rapidamente a funcionalidade principal e coletando feedbacks reais dos usuários. Isso permite corrigir problemas e melhorar o produto gradativamente",
+    "is_sequel": true
+  },
+  {
+    "chapter_ID": 4,
+    "text": "Você contrata uma pequena equipe de desenvolvedores e testers para focar na estabilidade do app. Aos poucos, os bugs são corrigidos, a confiança dos usuários volta, e o produto começa a receber avaliações positivas",
+    "is_sequel": true
+  },
+  {
+    "chapter_ID": 5,
+    "text": "Você recebe uma proposta para trabalhar em um projeto freelance de curto prazo que pode impulsionar sua carreira, mas vai exigir dedicação intensa durante o próximo mês",
+    "is_sequel": false
   }
 ]
