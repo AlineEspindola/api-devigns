@@ -1,4 +1,6 @@
 const mysql = require("mysql");
+const chapters = require("../data/chapters.json");
+const options = require("../data/options.json");
 
 const db = mysql.createConnection({
   host: "localhost",
@@ -35,6 +37,8 @@ function initDatabase() {
           }
         });
       });
+
+      insertTables();
     });
   });
 }
@@ -98,9 +102,96 @@ function createSQLTables() {
           ON UPDATE CASCADE
         );
       `,
-    }
+    },
   ];
   return createTables;
+}
+
+function insertTables() {
+  chapters.forEach((chapter) => {
+    const { chapter_ID, text, is_sequel } = chapter;
+
+    const checkSql = "SELECT 1 FROM chapter WHERE chapter_ID = ? LIMIT 1";
+    db.query(checkSql, [chapter_ID], (err, results) => {
+      if (err) {
+        console.error(`Erro ao verificar capítulo ${chapter_ID}:`, err);
+        return;
+      }
+
+      if (results.length > 0) {
+        console.log(`Capítulo ${chapter_ID} já existe. Ignorando...`);
+      } else {
+        const insertSql =
+          "INSERT INTO chapter (chapter_ID, text, is_sequel) VALUES (?, ?, ?)";
+        db.query(insertSql, [chapter_ID, text, is_sequel], (insertErr) => {
+          if (insertErr) {
+            console.error(`Erro ao inserir capítulo ${chapter_ID}:`, insertErr);
+          } else {
+            console.log(`Capítulo ${chapter_ID} inserido com sucesso.`);
+          }
+        });
+      }
+    });
+  });
+
+  options.forEach((option) => {
+    const {
+      options_ID,
+      chapter_ID,
+      right_text,
+      left_text,
+      right_sanity,
+      right_knowledge,
+      right_money,
+      left_sanity,
+      left_knowledge,
+      left_money,
+      next_chapter_right,
+      next_chapter_left,
+    } = option;
+
+    const checkSql = "SELECT 1 FROM options WHERE options_ID = ? LIMIT 1";
+    db.query(checkSql, [options_ID], (err, results) => {
+      if (err) {
+        console.error(`Erro ao verificar as opções ${options_ID}: `, err);
+        return;
+      }
+
+      if (results.length > 0) {
+        console.log(`Opções ${options_ID} já existe. Ignorando...`);
+      } else {
+        const insertSql =
+          "INSERT INTO options (options_ID, chapter_ID, right_text, left_text, right_sanity, right_knowledge, right_money, left_sanity, left_knowledge, left_money, next_chapter_right, next_chapter_left) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        db.query(
+          insertSql,
+          [
+            options_ID,
+            chapter_ID, 
+            right_text,
+            left_text,
+            right_sanity,
+            right_knowledge,
+            right_money,
+            left_sanity,
+            left_knowledge,
+            left_money,
+            next_chapter_right,
+            next_chapter_left,
+          ],
+          (insertErr) => {
+            if (insertErr) {
+              console.error(
+                `Erro ao inserir capítulo ${options_ID}:`,
+                insertErr
+              );
+            } else {
+              console.log(`Opções ${options_ID} inserido com sucesso.`);
+            }
+          }
+        );
+      }
+    });
+  });
 }
 
 db.connect((err) => {
