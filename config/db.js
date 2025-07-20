@@ -48,6 +48,27 @@ function initDatabase() {
             );
           `,
         },
+        {
+          name: "options",
+          sql: `
+            CREATE TABLE IF NOT EXISTS options (
+              options_ID INT AUTO_INCREMENT PRIMARY KEY,
+              right_text TEXT NOT NULL,
+              left_text TEXT NOT NULL,
+              right_sanity TINYINT NOT NULL,
+              right_knowledge TINYINT NOT NULL,
+              right_money TINYINT NOT NULL,
+              left_sanity TINYINT NOT NULL,
+              left_knowledge TINYINT NOT NULL,
+              left_money TINYINT NOT NULL,
+              chapter_ID INT,
+              CONSTRAINT fk_chapter
+                FOREIGN KEY (chapter_ID) REFERENCES chapter(chapter_ID)
+                ON DELETE SET NULL
+                ON UPDATE CASCADE
+            );
+          `,
+        }
       ];
 
       createTables.forEach((table) => {
