@@ -1,17 +1,22 @@
 const chapterModel = require("../models/chapterModel");
+const jwt = require("jsonwebtoken");
 
 const addTurnToChapter = (req, res) => {
-  const { chapterID, turnID } = req.params;
+  const token = req.token;
 
-  chapterModel.insertTurnToChapter(chapterID, turnID, (err, result) => {
-    if (err) {
-      console.error("Erro ao inserir turno no capítulo: ", err);
-      return res
-        .status(500)
-        .json({ error: "Erro ao colocar turno no capítulo" });
-    }
+  jwt.verify(token, "secretKey", (err, authData) => {
+    const { chapterID, turnID } = req.params;
 
-    res.json({ message: "Turno adicionado ao capítulo com sucesso" });
+    chapterModel.insertTurnToChapter(chapterID, turnID, (err, result) => {
+      if (err) {
+        console.error("Erro ao inserir turno no capítulo: ", err);
+        return res
+          .status(500)
+          .json({ error: "Erro ao colocar turno no capítulo" });
+      }
+
+      res.json({ message: "Turno adicionado ao capítulo com sucesso" });
+    });
   });
 };
 
