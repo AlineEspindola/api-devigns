@@ -1,6 +1,25 @@
 const jwt = require("jsonwebtoken");
 const turnModel = require("../models/turnModel");
 
+const getTurn = (req, res) => {
+  const { turnID } = req.params;
+
+  turnModel.getTurnById(turnID, (err, result) => {
+    if (err) {
+      console.error("Erro ao pegar ao pegar o turno: ", err);
+      return res.status(500).json({
+        error: "Erro interno ao buscar o turno",
+      });
+    }
+
+    if (!result || result.length === 0) {
+      return res.status(404).json({ error: "Turno não encontrado" });
+    }
+
+    return res.status(200).json(result);
+  });
+};
+
 const createTurn = (req, res) => {
   const newTurn = {
     status: "IN_PROGRESS",
@@ -57,6 +76,7 @@ const finishTurn = (req, res) => {
 };
 
 module.exports = {
+  getTurn,
   createTurn,
   finishTurn,
 };
