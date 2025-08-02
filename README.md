@@ -1,19 +1,57 @@
+# 🎮 API Devigns – Jogo Interativo Estilo Reigns
+
 <div align="center">
-  <img src="https://media.licdn.com/dms/image/v2/D4D22AQGD8aDUvpf4Sg/feedshare-shrink_2048_1536/B4DZgyc.7SGQAo-/0/1753193118176?e=1756339200&v=beta&t=ZBmAnP8qHQg25Njq86ke5lUwP802CemSYgeCFIMGMTI" width="300" alt="imagem hipotetica do jogo" />
-  <p>(Ideia de como poderia ser a interface com a API)</p>
-  <p>Essa API oferece uma experiência de jogo interativo baseado em texto inspirado no jogo Reigns, onde o jogador percorre capítulos da história de um desenvolvedor, toma decisões e gerencia suas pontuações em um turno específico</p>
+  <img src="https://media.licdn.com/dms/image/v2/D4D22AQGD8aDUvpf4Sg/feedshare-shrink_2048_1536/B4DZgyc.7SGQAo-/0/1753193118176?e=1756339200&v=beta&t=ZBmAnP8qHQg25Njq86ke5lUwP802CemSYgeCFIMGMTI" width="300" alt="Imagem ilustrativa do jogo" />
+  <p><em>Exemplo de como poderia ser a interface conectada à API</em></p>
 </div>
 
-![Under Construction](https://img.shields.io/badge/Under%20Construction-yellow)
+## 📖 Sobre o projeto
+
+Essa API oferece uma experiência de **jogo interativo baseado em texto**, inspirado no famoso jogo **Reigns**, onde o jogador percorre capítulos da história de um desenvolvedor, toma decisões e gerencia suas pontuações em um turno específico.
+
+O objetivo é criar uma narrativa ramificada, onde cada escolha influencia o progresso e as estatísticas do jogador.
+
+---
 
 ## 🛠️ Tecnologias
 
 As principais tecnologias utilizadas são:
 
-<img src="https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
-<img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
-<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
+![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+
+---
+
+## 📥 Como baixar e rodar o projeto
+
+### 1️⃣ Clonar o repositório
+```bash
+git clone https://github.com/AlineEspindola/api-devigns
+```
+
+### 2️⃣ Entrar na pasta do projeto
+```bash
+cd api-devigns
+```
+
+### 3️⃣ Instalar as dependências
+```bash
+npm install
+```
+
+### 5️⃣ Rodar a aplicação
+```bash
+node index.js
+```
+
+### O servidor estará disponível no endereço:
+```bash
+http://localhost:3000
+```
+
+---
 
 ## 👥 Desenvolvedora
 
@@ -22,4 +60,3 @@ As principais tecnologias utilizadas são:
     <td align="center"><a href="https://github.com/AlineEspindola"><img src="https://avatars.githubusercontent.com/AlineEspindola" width="80px;" alt="Aline Espindola"/><br /><sub><b>Aline Espindola</b></sub></a><br /><a href="#" title="Code">💻🎨</a></td>
   </tr>
 </table>
-
