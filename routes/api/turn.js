@@ -5,6 +5,7 @@ const turnController = require("../../controllers/turnController")
 router.get("/:turnID", turnController.getTurn)
 router.post("/init_turn", turnController.createTurn);
 router.post("/finish_turn", verifyToken, turnController.finishTurn);
+router.get("/choose_option/:turnID/:choice", turnController.chooseOption);
 
 function verifyToken(req, res, next) {
   const bearerHeader = req.headers["authorization"];

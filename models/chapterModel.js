@@ -9,6 +9,11 @@ const ChapterModel = {
   getChapterByTurnID: (turn_ID, callback) => {
     const sql = "SELECT * FROM chapter WHERE turn_ID = ? "
     db.query(sql, [turn_ID], callback)
+  },
+
+  updateChapter: (chapter_ID, chapterData, callback) => {
+    const sql = "UPDATE chapter SET ? WHERE chapter_ID = ?";
+    db.query(sql, [chapterData, chapter_ID], callback);
   }
 }
 

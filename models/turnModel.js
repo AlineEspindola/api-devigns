@@ -1,4 +1,4 @@
-const db = require('../config/db');
+const db = require("../config/db");
 
 const TurnModel = {
   insertTurn: (turnData, callback) => {
@@ -18,7 +18,12 @@ const TurnModel = {
   finishTurn: (turn_ID, status, callback) => {
     const sql = "UPDATE turn SET status = ? WHERE turn_ID = ?";
     db.query(sql, [status, turn_ID], callback);
-  }
-}
+  },
+
+  updateTurn: (turn_ID, turnData, callback) => {
+    const sql = "UPDATE turn SET ? WHERE turn_ID = ?";
+    db.query(sql, [turnData, turn_ID], callback);
+  },
+};
 
 module.exports = TurnModel;
