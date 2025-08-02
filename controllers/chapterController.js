@@ -1,8 +1,7 @@
 const chapterModel = require("../models/chapterModel");
 
 const addTurnToChapter = (req, res) => {
-  const { chapterID } = req.params;
-  const { turnID } = req.body;
+  const { chapterID, turnID } = req.params;
 
   chapterModel.insertTurnToChapter(chapterID, turnID, (err, result) => {
     if (err) {
