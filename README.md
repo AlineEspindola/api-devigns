@@ -1,7 +1,7 @@
 # 🎮 API Devigns – Jogo Interativo Estilo Reigns
 
 <div align="center">
-  <img src="https://media.licdn.com/dms/image/v2/D4D22AQGD8aDUvpf4Sg/feedshare-shrink_2048_1536/B4DZgyc.7SGQAo-/0/1753193118176?e=1756339200&v=beta&t=ZBmAnP8qHQg25Njq86ke5lUwP802CemSYgeCFIMGMTI" width="300" alt="Imagem ilustrativa do jogo" />
+  <img src="https://github.com/user-attachments/assets/213fef20-2990-4941-8912-087bc13ac931" width="300" alt="Imagem ilustrativa do jogo" />
   <p><em>Exemplo de como poderia ser a interface conectada à API</em></p>
 </div>
 
